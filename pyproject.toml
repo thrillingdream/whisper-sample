@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "whisper-sample"
+version = "0.1.0"
+description = ""
+authors = ["None"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "3.12.3"
+yt-dlp = "^2024.4.9"
+faster-whisper = "^1.0.2"
+nvidia-cublas-cu11 = "^11.11.3.6"
+nvidia-cudnn-cu11 = "^9.1.1.17"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
