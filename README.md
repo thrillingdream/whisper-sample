@@ -1,5 +1,6 @@
-# 音声文字起こしアプリ
-Faster Whisperモデルを使用して音声ファイルまたは動画ファイルの文字起こしをすることができます。
+# Faster Whisper for docker compose
+Faster Whisper large-v3モデルを使用して音声ファイルまたは動画ファイルの文字起こしをすることができます。
+docker composeを使用しているので環境構築が楽です。
 
 基本的には、GPUを推奨しますが、GPUが搭載されていない場合でも、CPUを使って文字起こしをします
 ※低速なので夜間実行推奨
