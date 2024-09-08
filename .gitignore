@@ -1,9 +1,8 @@
-# audio files
-*.m4a
-*.mp3
+# media files
+/media/*
 
 # output files
-./output/*.txt
+/output/*
 
 
 # Byte-compiled / optimized / DLL files

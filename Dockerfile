@@ -29,12 +29,12 @@ RUN poetry export -f requirements.txt --output requirements.txt
 # 依存関係をインストール
 RUN pip install -r requirements.txt
 
-# CUDA関連パッケージのインストール
+# CUDA関連パッケージのインストール。Poetryだとコケるので直接インストールする。
 RUN pip install nvidia-pyindex
 RUN pip install nvidia-cublas
 
-# LD_LIBRARY_PATHの設定
-ENV LD_LIBRARY_PATH /usr/local/lib/python3.12/dist-packages/nvidia/cublas/lib:/usr/local/lib/python3.12/dist-packages/nvidia/cudnn/lib
+# LD_LIBRARY_PATHの設定（おまじない）
+ENV LD_LIBRARY_PATH `python3 -c 'import os; import nvidia.cublas.lib; import nvidia.cudnn.lib; print(os.path.dirname(nvidia.cublas.lib.__file__) + ":" + os.path.dirname(nvidia.cudnn.lib.__file__))'
 
 # アプリケーションのソースコードをコピー
 COPY . /app
