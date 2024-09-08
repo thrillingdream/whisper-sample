@@ -5,7 +5,7 @@ import datetime
 import subprocess
 
 # Constants
-AUDIO_FILE_NAME = "./media/中間発表練習, 2024年8月31日 - 13-21-14.mp4"
+AUDIO_FILE_NAME = "./media/voice01_A.mp3"
 MODEL_SIZE = "large-v3"
 OUTPUT_DIR = "/app/mount"
 
